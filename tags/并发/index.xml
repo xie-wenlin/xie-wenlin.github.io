@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>并发 - 标签 - book</title>
+        <link>https://xie-wenlin.github.io/tags/%E5%B9%B6%E5%8F%91/</link>
+        <description>并发 - 标签 - book</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wenlin.xie01@gmail.com (2019lin)</managingEditor>
+            <webMaster>wenlin.xie01@gmail.com (2019lin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Dec 2022 20:36:10 &#43;0800</lastBuildDate><atom:link href="https://xie-wenlin.github.io/tags/%E5%B9%B6%E5%8F%91/" rel="self" type="application/rss+xml" /><item>
+    <title>数据库</title>
+    <link>https://xie-wenlin.github.io/posts/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <pubDate>Mon, 12 Dec 2022 20:36:10 &#43;0800</pubDate>
+    <author>2019lin</author>
+    <guid>https://xie-wenlin.github.io/posts/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+    <description><![CDATA[数据库 ]]></description>
+</item>
+<item>
+    <title>go的并发</title>
+    <link>https://xie-wenlin.github.io/posts/go%E7%9A%84%E5%B9%B6%E5%8F%91/</link>
+    <pubDate>Sat, 10 Dec 2022 16:11:55 &#43;0800</pubDate>
+    <author>2019lin</author>
+    <guid>https://xie-wenlin.github.io/posts/go%E7%9A%84%E5%B9%B6%E5%8F%91/</guid>
+    <description><![CDATA[go的并发 在 Go 中，您可以使用 goroutine 来编写并发代码。goroutine 是一种轻量级的线程，它允许您在单个进程中执行多个任务。您可以通过在函数名之前添加 go 关键字来创建一个 goroutine。下面是一个简单的例子：
+1 2 3 4 5 6 7 package main import &#34;fmt&#34; func main() { go fmt.Println(&#34;Hello, world!&#34;) } 在这个例子中，我们创建了一个 goroutine 来打印 &ldquo;Hello, world!&quot;。这个 goroutine 会在 main 函数返回之前执行，因此您可以使用 goroutine 来执行需要长时间运行的任务。
+如果你想写一个优美的 Go 并发程序，你需要遵循一些基本的原则。首先，在 Go 中使用通信来共享内存，而不是通过共享内存来通信。这意味着，在 Go 程序中，你应该尽量使用通道（channels）来在 goroutines 之间传递数据。
+其次，你应该尽量避免使用全局变量，因为它们会使程序的并发性变得更加困难。相反，你应该通过函数参数和返回值来传递数据。
+此外，你应该注意避免竞争条件（race condition），这是指在多个 goroutines 之间发生的不确定的状态更改。这可以通过 Go 语言提供的 sync 包中的互斥锁（mutex）来解决。你还需要掌握 Go 语言中的并发模型。Go 语言提供了一种简单而有效的并发模型，通过 goroutine 和 channel 来实现。使用 goroutine 可以创建并行的任务，通过 channel 可以在多个 goroutine 之间传递消息。]]></description>
+</item>
+</channel>
+</rss>

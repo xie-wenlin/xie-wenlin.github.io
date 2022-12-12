@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>设计模式 - 分类 - book</title>
+        <link>https://xie-wenlin.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <description>设计模式 - 分类 - book</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wenlin.xie01@gmail.com (2019lin)</managingEditor>
+            <webMaster>wenlin.xie01@gmail.com (2019lin)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Dec 2022 16:11:55 &#43;0800</lastBuildDate><atom:link href="https://xie-wenlin.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>懒汉模式</title>
+    <link>https://xie-wenlin.github.io/posts/%E6%87%92%E6%B1%89%E6%A8%A1%E5%BC%8F/</link>
+    <pubDate>Sat, 10 Dec 2022 16:11:55 &#43;0800</pubDate>
+    <author>2019lin</author>
+    <guid>https://xie-wenlin.github.io/posts/%E6%87%92%E6%B1%89%E6%A8%A1%E5%BC%8F/</guid>
+    <description><![CDATA[go懒汉模式 &ldquo;懒汉模式&rdquo;（lazy instantiation）是指在第一次使用时才会创建对象的方法。这与饿汉模式（eager instantiation）不同，饿汉模式会在程序启动时就创建对象。
+Go 语言中的懒汉模式指的是在需要的时候才创建对象的方式。这种方式的好处是可以节省内存，因为对象只有在真正需要的时候才会被创建。不过，使用懒汉模式时需要注意线程安全问题。Go语言没有直接支持懒汉模式的语法，但是你可以通过编写一个函数来实现这个模式。例如：
+1 2 3 4 5 6 7 8 var instance *Singleton func GetInstance() *Singleton { if instance == nil { instance = &amp;Singleton{} } return instance } 在这个函数中，我们首先检查实例是否为空，如果是，我们创建一个新的实例并将其保存到变量中。如果实例已经存在，我们直接返回它。
+需要注意的是，由于Go语言没有类型，所以我们需要使用一个全局变量来保存实例。这可能会导致一些问题，例如多个单例实例之间的冲突，因此在实际开发中应该谨慎使用。
+在 go 语言中，可以使用 sync.Once 类型来实现懒汉模式,解决多个单例之间的冲突。例如：
+1 2 3 4 5 6 7 8 9 10 11 import &#34;sync&#34; var once sync.Once var instance *MyType func GetInstance() *MyType { once.Do(func() { instance = &amp;MyType{} }) return instance } 在上面的代码中，GetInstance 函数使用 sync.]]></description>
+</item>
+</channel>
+</rss>
